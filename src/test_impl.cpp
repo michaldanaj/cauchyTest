@@ -154,16 +154,16 @@ double Kuiper(NumericVector tab)
 {
   int n = tab.size();
   double V=0;
-  NumericVector *D_plus = new NumericVector(n);
+  NumericVector D_plus(n);
 
-  NumericVector * D_minus= new NumericVector(n);
+  NumericVector D_minus(n);
 
   for ( int i=0; i<n; i++)
   {
     D_plus[i]=  (double)(i+1)/n - tab[i];
     D_minus[i]= tab[i] - (double)i/n;
   }
-  V=max(*D_plus) + max(*D_minus);
+  V=max(D_plus) + max(D_minus);
   // printf ("V = %f\n",V);
 
   return V;
