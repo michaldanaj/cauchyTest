@@ -28,31 +28,6 @@ using namespace Rcpp;
 //
 
 
-//============================================
-// Srednia Z_i
-//============================================
-double mean(NumericVector tab)
-{
-  int n=tab.size();
-  double srednia=0;
-  for (int i=0; i<n; i++)
-    srednia +=  tab[i]/n;
-  return srednia;
-}
-
-
-//============================================
-//   maximumu
-//============================================
-double max( NumericVector tab)
-{
-  int n = tab.size();
-  double max=tab[0];
-  for (int i=1;i<n;i++)
-    if (tab[i] > max)
-      max = tab[i];
-    return max;
-}
 
 
 //                              RODZINA CRAMERA-VON MISESA
