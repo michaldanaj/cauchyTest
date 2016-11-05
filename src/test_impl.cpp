@@ -36,8 +36,8 @@ double mean(NumericVector tab)
   int n=tab.size();
   double srednia=0;
   for (int i=0; i<n; i++)
-    srednia = srednia + tab[i];
-  return srednia/n;
+    srednia +=  tab[i]/n;
+  return srednia;
 }
 
 
